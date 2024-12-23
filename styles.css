@@ -11,30 +11,38 @@ body {
 
 .container {
     padding: 50px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Die Box nimmt den gesamten Bildschirm ein */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 h1 {
     font-size: 2.5em;
     margin-top: 20px;
-    background-color: #f06292; /* Beispielhintergrundfarbe */
-    color: white;
+    color: hotpink;
     border: none;
     border-radius: 20px;
     padding: 20px, 40px;
     width: 100%;
+    max-width: 600px; /* Passt sich an den Bildschirm an */
     cursor: pointer;
 }
 
 /* Password Box (Letter) */
 .password-container {
     position: relative;
-    width: 1000px;
-    margin: 10px auto;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
 }
 
 .letter {
     width: 100%;
+    max-width: 500px;
     background-color: #ffccff;
     border: 2px solid #ff0066;
     padding: 20px;
@@ -120,6 +128,7 @@ button {
 .hidden-picture-container {
     display: none; /* Zuerst verstecken */
     margin-top: 20px;
+    max-width: 90%;
     align-self: flex-end;
 }
 
@@ -158,4 +167,41 @@ button {
   to {
     opacity: 1;
   }
+}
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px; /* Reduziert den Außenabstand */
+        font-size: 1em; /* Passt Schriftgröße an */
+    }
+
+    .password-container {
+        width: 90%; /* Verkleinert die Box auf 90% der Breite des Bildschirms */
+        margin: 0 auto; /* Zentriert die Box */
+    }
+
+    .letter {
+        padding: 10px; /* Weniger Innenabstand */
+        font-size: 1em; /* Kleinere Schriftgröße */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Kleinere Schrift für Überschriften */
+        padding: 15px;
+    }
+
+    input[type="password"] {
+        width: 100%; /* Passt das Eingabefeld an die Breite an */
+        font-size: 1em;
+    }
+
+    button,
+    #revealPictureButton {
+        font-size: 1em; /* Kleinere Buttons */
+        padding: 8px 16px;
+    }
+
+    .hidden-picture {
+        max-height: 200px; /* Verkleinert das Bild */
+        width: auto; /* Sorgt dafür, dass es sich anpasst */
+    }
 }
