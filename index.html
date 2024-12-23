@@ -1,0 +1,46 @@
+﻿<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1> Happy Birthday, Ikea!!</h1>
+
+        <!-- Password Box (Looks like a letter) -->
+        <div class="password-container">
+            <div class="letter" id="letterBox">
+                <div class="flap" id="letterFlap">
+                    <input type="password" id="passwordInput" placeholder="Enter the password...">
+                    <button onclick="checkPassword()">Open the Letter</button>
+                </div>
+                <div class="letter-content" id="letterContent">
+                    <p>Click the hearts <3</p>
+                    <button class="heart-button" onclick="revealMessage(1)">❤️</button><br>
+                    <p id="message1" class="hidden-message"></p>
+
+                    <button class="heart-button" onclick="revealMessage(2)">💖</button><br>
+                    <p id="message2" class="hidden-message"></p>
+
+                    <button class="heart-button" onclick="revealMessage(3)">💕</button><br>
+                    <p id="message3" class="hidden-message"></p>
+             
+                </div>
+                <!-- Container für das Bild, das später angezeigt wird -->
+                <div id="surpriseContainer" class="hidden-picture-container">
+                    <img id="surprisePicture" src="D:\Michelle\tmp\wolf.jpeg" alt="Surprise" class="hidden-picture" />
+                </div>
+
+                <!-- Surprise Button -->
+                <button id="revealPictureButton" class="heart-button" onclick="revealSurprisePicture()">Click for a surprise!</button><br>
+
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
