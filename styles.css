@@ -43,6 +43,8 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    min-height: 100vh; /* Füllt die gesamte Höhe des Bildschirms */
+    padding: 20px; /* Abstand innen */
     max-width: 500px;
     margin: 20px auto;
     margin-top: 0px;
