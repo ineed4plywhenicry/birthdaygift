@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-    padding: 50px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,22 +22,31 @@ body {
 
 h1 {
     font-size: 2.5em;
-    margin-top: 20px;
+    margin-top: -500px;
+    margin-bottom: 20px;
+    top: 50%;
+    left: 50%;
     color: hotpink;
     border: none;
     border-radius: 20px;
     padding: 20px, 40px;
     width: 100%;
+    text-align: center;
     max-width: 600px; /* Passt sich an den Bildschirm an */
     cursor: pointer;
 }
 
 /* Password Box (Letter) */
 .password-container {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     max-width: 500px;
     margin: 20px auto;
+    margin-top: 0px;
+
 }
 
 .letter {
@@ -51,13 +60,13 @@ h1 {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease;
+    transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1); /* Glattere Animation */
 }
 
 /* Letter Flap */
 .flap {
     display: block;
-    transition: transform 0.5s ease;
+    transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smooth easing */
     transform-origin: top center;
 }
 
@@ -90,9 +99,12 @@ button {
 .letter-content {
     display: none;
     flex-direction: column; /* Stellen sicher, dass die Elemente untereinander stehen */
-    align-items: center; /* Zentriert die Inhalte */
-    margin-top: auto;
-    font-size: 2em;
+    align-content: start;
+    align-items: flex-start; /* Zentriert die Inhalte */
+    justify-content: flex-start;
+    margin-top: -120px;
+    font-size: 1.5em;
+    
 }
 
 .hidden-message {
@@ -108,7 +120,7 @@ button {
     background: none;
     flex-direction: column;
     border: none;
-    font-size: 3em;
+    font-size: 2em;
     cursor: pointer;
     margin: 10px;
     align-content: center;
@@ -128,8 +140,13 @@ button {
 .hidden-picture-container {
     display: none; /* Zuerst verstecken */
     margin-top: 20px;
+    margin-left: 25px;
     max-width: 90%;
-    align-self: flex-end;
+    top: 50%;
+    left: 50%;
+    font-size: 1em;
+    align-items: center;
+    justify-content: center; /* Zentriert horizontal */
 }
 
 /* Button für die Überraschung, der zu Beginn unsichtbar ist */
@@ -152,11 +169,11 @@ button {
     }
 
 .hidden-picture {
-  max-width: 100%;
-  max-height: 300px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 1s ease-in-out;
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
 }
 
 /* Fade-In-Animation */
