@@ -6,7 +6,10 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    width: 100%;
+    heigth: 100%;
     overflow-y: scroll; /* Verhindert Layoutspringen durch Scrollbar */
+    overflow-x: hidden;
 }
 
 .container {
