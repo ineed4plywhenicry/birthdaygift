@@ -1,6 +1,6 @@
 ﻿function checkPassword() {
     // The password that unlocks the letter
-    const correctPassword = "only4YourEyes";
+    const correctPassword = "ForMySigma";
 
     // Get the input value
     const passwordInput = document.getElementById("passwordInput").value;
@@ -12,6 +12,7 @@
             // Show the letter content after the animation
             document.getElementById("letterContent").style.display = "block";
             document.getElementById("revealPictureButton").style.display = "block"
+
         }, 500); // Wait for the flap to open before showing the content
         // Function to reveal the surprise picture
       
